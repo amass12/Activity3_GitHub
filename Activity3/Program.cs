@@ -4,54 +4,69 @@
     {
         static void Main(string[] args)
         {
-            ConsoleKeyInfo key;
-            do
-            {
-                ShowTopics();
-                key = Console.ReadKey();
-                Console.Clear();
-                switch (key.Key)
-                {
-                    case ConsoleKey.D1:
-                        ShowSportsQuestions();
-                        break;
-                    case ConsoleKey.D2:
-                        ShowArtQuestions();
-                        break;
-                    case ConsoleKey.D3:
-                        ShowFilmQuestions();
-                        break;
-                    case ConsoleKey.D4:
-                        ShowHistoryQuestions();
-                        break;
-                    case ConsoleKey.D5:
-                        ShowMathQuestions();
-                        break;
-                    case ConsoleKey.D6:
-                        ShowScienceQuestions();
-                        break;
-
-                    default:
-                        Console.WriteLine("Exit program");
-                        break;
-                }
-
-            } while (key.Key != ConsoleKey.D0);
+            
         }
 
-        static void ShowTopics()
+
+
+        static void ShowSportsQuestions()
         {
-            //darle tiempo de margen al clear
-            Console.Clear();
-            Console.WriteLine("1. SPORTS");
-            Console.WriteLine("2. ART");
-            Console.WriteLine("3. FILMS");
-            Console.WriteLine("4. HISTORY");
-            Console.WriteLine("5. MATHS");
-            Console.WriteLine("6. SCIENCE");
+            string[] questions;
+            int topic = 1;
+            questions = new string[]
+            {
+                "How long does a soccer game last?",
+                "Which swimming style is faster?",
+                "What sport is played annually in Paris at the Roland Garros tournament?",
+                "How many members does a beach volleyball team have?",
+                "In which country was football invented?"
+            };
+
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                ShowReadAnswers(topic, i);
+            }
         }
+        static void ShowArtQuestions()
+        {
+            string[] questions;
+            int topic = 2;
+            questions = new string[]
+            {
+                "Where is the Louvre museum located?",
+                "Who painted \"La Gioconda\"?",
+                "What is the name of the painter who cut off his ear?",
+                "The painting called \"Guernica\" was made by...",
+                "Who painted the Sistine Chapel in the Vatican?"
+            };
 
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                ShowReadAnswers(topic, i);
+            }
+        }
+        //ACABAR PREGUNTAS Y PONER LAS RESPUESTAS BIUEN!!!
+        static void ShowFilmQuestions()
+        {
+            string[] questions;
+            int topic = 3;
+            questions = new string[]
+            {
+                "What color is present in almost every shot of The Shining?",
+                "How many Saw movies are?",
+                "What year do Marty and Doc travel to in \"Back to the Future II\"?",
+                "The painting called \"Guernica\" was made by...",
+                "Who painted the Sistine Chapel in the Vatican?"
+            };
 
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                ShowReadAnswers(topic, i);
+            }
+        }
 
         static void ShowReadAnswers(int topicNumber, int questionNum)
         {
@@ -153,25 +168,25 @@
                 switch (questionNum)
                 {
                     case 0:
-                        Console.WriteLine("A.30 minutes");
-                        Console.WriteLine("B.120 minutes");
-                        Console.WriteLine("C.90 minutes");
-                        Console.WriteLine("D.40 minutes");
+                        Console.WriteLine("A.blue");
+                        Console.WriteLine("B.yellow");
+                        Console.WriteLine("C.red");
+                        Console.WriteLine("D.black");
                         CheckAnswersShowResult("c", input = Console.ReadLine());
                         break;
                     case 1:
-                        Console.WriteLine("A.30 minutes");
-                        Console.WriteLine("B.120 minutes");
-                        Console.WriteLine("C.90 minutes");
-                        Console.WriteLine("D.40 minutes");
-                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        Console.WriteLine("A.10");
+                        Console.WriteLine("B.6");
+                        Console.WriteLine("C.9");
+                        Console.WriteLine("D.7");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
                         break;
                     case 2:
-                        Console.WriteLine("A.30 minutes");
-                        Console.WriteLine("B.120 minutes");
-                        Console.WriteLine("C.90 minutes");
-                        Console.WriteLine("D.40 minutes");
-                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        Console.WriteLine("A.2010");
+                        Console.WriteLine("B.2033");
+                        Console.WriteLine("C.2015");
+                        Console.WriteLine("D.2024");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
                         break;
                     case 3:
                         Console.WriteLine("A.30 minutes");
