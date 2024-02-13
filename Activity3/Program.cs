@@ -29,6 +29,25 @@
                 Console.WriteLine(questions[i]);
                 ShowReadAnswers(topic, i);
             }
+            static public string[] ShowMathQuestions()
+            {
+                string[] questions;
+                int topic = 1;
+                questions = new string[]
+                {
+                "What is the value of π (pi) rounded to two decimal places?",
+                "What is the square root of 144?",
+                "What is the result of 7 × 8 ÷ 4?",
+                "What is the value of 5² - 3²?",
+                "What is the sum of the interior angles of a triangle?"
+                };
+
+                for (int i = 0; i < questions.Length; i++)
+                {
+                    Console.WriteLine(questions[i]);
+                    ShowReadAnswers(topic, i);
+                }
+            }
         }
         
     }
