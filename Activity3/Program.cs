@@ -47,7 +47,7 @@
                 ShowReadAnswers(topic, i);
             }
         }
-        //ACABAR PREGUNTAS Y PONER LAS RESPUESTAS BIUEN!!!
+        //ACABAR PREGUNTAS Y PONER LAS RESPUESTAS BIUEN!!
         static void ShowFilmQuestions()
         {
             string[] questions;
