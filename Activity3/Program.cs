@@ -48,6 +48,25 @@
                     ShowReadAnswers(topic, i);
                 }
             }
+            static public string[] ShowScienceQuestions()
+            {
+                string[] questions;
+                int topic = 1;
+                questions = new string[]
+                {
+                "What is the chemical symbol for water?",
+                "What is the process by which plants make their own food called?",
+                "Which planet is known as the \"Red Planet\"?",
+                "What is the atomic number of carbon?",
+                "What is the Earth's outermost layer called?"
+                };
+
+                for (int i = 0; i < questions.Length; i++)
+                {
+                    Console.WriteLine(questions[i]);
+                    ShowReadAnswers(topic, i);
+                }
+            }
         }
         
     }
