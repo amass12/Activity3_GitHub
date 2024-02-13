@@ -4,11 +4,11 @@
     {
         static void Main(string[] args)
         {
-            ConsoleKeyInfo key ;
+            ConsoleKeyInfo key;
             do
             {
                 ShowTopics();
-                key=Console.ReadKey();
+                key = Console.ReadKey();
                 Console.Clear();
                 switch (key.Key)
                 {
@@ -19,12 +19,16 @@
                         ShowArtQuestions();
                         break;
                     case ConsoleKey.D3:
+                        ShowFilmQuestions();
                         break;
                     case ConsoleKey.D4:
+                        ShowHistoryQuestions();
                         break;
                     case ConsoleKey.D5:
+                        ShowMathQuestions();
                         break;
                     case ConsoleKey.D6:
+                        ShowScienceQuestions();
                         break;
 
                     default:
@@ -47,51 +51,14 @@
             Console.WriteLine("6. SCIENCE");
         }
 
-        static void ShowSportsQuestions()
-        {
-            string[] questions;
-            int topic = 1;
-            questions = new string[]
-            {
-                "How long does a soccer game last?",
-                "Which swimming style is faster?",
-                "What sport is played annually in Paris at the Roland Garros tournament?",
-                "How many members does a beach volleyball team have?",
-                "In which country was football invented?"
-            };
 
-            for(int i = 0; i < questions.Length; i++)
-            {
-                Console.WriteLine(questions[i]);
-                ShowReadAnswers(topic, i);
-            }
-        }
-        static void ShowArtQuestions()
-        {
-            string[] questions;
-            int topic = 2;
-            questions = new string[]
-            {
-                "Where is the Louvre museum located?",
-                //ACABAR PREGUNTAS ART
-                "Which swimming style is faster?",
-                "What sport is played annually in Paris at the Roland Garros tournament?",
-                "How many members does a beach volleyball team have?",
-                "In which country was football invented?"
-            };
-
-            for (int i = 0; i < questions.Length; i++)
-            {
-                Console.WriteLine(questions[i]);
-                ShowReadAnswers(topic, i);
-            }
-        }
 
         static void ShowReadAnswers(int topicNumber, int questionNum)
         {
             String input;
             if (topicNumber == 1)
             {
+                //SPORTS
                 switch (questionNum)
                 {
                     case 0:
@@ -129,37 +96,249 @@
                         Console.WriteLine("D.40 minutes");
                         CheckAnswersShowResult("d", input = Console.ReadLine());
                         break;
-                    default: 
+                    default:
                         Console.WriteLine("ERROR");
                         break;
                 }
-                
-            }
-            else if(topicNumber == 2)
-            {
 
+            }
+            else if (topicNumber == 2)
+            {
+                //ART
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
             }
             else if (topicNumber == 3)
             {
+                //FILMS
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
 
             }
             else if (topicNumber == 4)
             {
+                //HISTORY
+
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
 
             }
+
             else if (topicNumber == 5)
             {
+                //MATHS
 
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
             }
+
             else
             {
+                //SCIENCE
 
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.30 minutes");
+                        Console.WriteLine("B.120 minutes");
+                        Console.WriteLine("C.90 minutes");
+                        Console.WriteLine("D.40 minutes");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
             }
         }
 
         static void CheckAnswersShowResult(String correctAnswer, String input)
         {
-            if (input.Trim().ToLower()==correctAnswer.ToLower().Trim())
+            if (input.Trim().ToLower() == correctAnswer.ToLower().Trim())
             {
                 Console.WriteLine("CORRECT");
             }
@@ -168,8 +347,9 @@
                 Console.WriteLine("INCORRECT");
             }
             Console.WriteLine();
-           
+
         }
 
+        
     }
 }
