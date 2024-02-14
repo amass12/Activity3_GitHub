@@ -8,7 +8,7 @@
         }
 
 
-        //hola
+
         static void ShowSportsQuestions()
         {
             string[] questions;
