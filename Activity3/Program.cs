@@ -4,12 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-        }
-        static public void HistoryTrivia()
-        {
-            Console.WriteLine("The 'Topic' is HISTORY");
-
+            
         }
         static public string[] ShowHistoryQuestions()
         {
