@@ -51,10 +51,12 @@ namespace Activity3
             Console.WriteLine("5. MATHS");
             Console.WriteLine("6. SCIENCE");
         }
+
         static public void ShowHistoryQuestions()
         {
             string[] questions;
             int topic = 4;
+
             questions = new string[]
             {
 
@@ -64,12 +66,16 @@ namespace Activity3
                 "In what year did World War II end?",
                 "Who was the Egyptian queen known for her alliance with Julius Caesar and Mark Antony?"
             };
+
             for (int i = 0; i < questions.Length; i++)
             {
                 Console.WriteLine(questions[i]);
                 ShowReadAnswers(topic, i);
             }
         }
+
+
+
         static void ShowSportsQuestions()
         {
             string[] questions;
@@ -122,6 +128,7 @@ namespace Activity3
                 "Which planet is known as the \"Red Planet\"?",
                 "What is the atomic number of carbon?",
                 "What is the Earth's outermost layer called?"
+
             };
 
             for (int i = 0; i < questions.Length; i++)
@@ -130,17 +137,21 @@ namespace Activity3
                 ShowReadAnswers(topic, i);
             }
         }
+
+
         static public void ShowMathQuestions()
         {
             string[] questions;
             int topic = 5;
             questions = new string[]
             {
+
                 "What is the value of π (pi) rounded to two decimal places?",
                 "What is the square root of 144?",
                 "What is the result of 7 × 8 ÷ 4?",
                 "What is the value of 5² - 3²?",
                 "What is the sum of the interior angles of a triangle?"
+
             };
 
             for (int i = 0; i < questions.Length; i++)
@@ -149,6 +160,8 @@ namespace Activity3
                 ShowReadAnswers(topic, i);
             }
         }
+        
+
         static void ShowFilmQuestions()
         {
             string[] questions;
