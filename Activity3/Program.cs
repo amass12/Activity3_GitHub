@@ -37,7 +37,6 @@ namespace Activity3
                         break;
                 }
 
-
             } while (key.Key != ConsoleKey.D0);
         }
 
@@ -52,13 +51,32 @@ namespace Activity3
             Console.WriteLine("5. MATHS");
             Console.WriteLine("6. SCIENCE");
         }
+        static public void ShowHistoryQuestions()
+        {
+            string[] questions;
+            int topic = 4;
+            questions = new string[]
+            {
 
+                "In what year did World War I begin?",
+                "Who was the first president of the United States?",
+                "What was the name of the ship on which Christopher Columbus reached America in 1492?",
+                "In what year did World War II end?",
+                "Who was the Egyptian queen known for her alliance with Julius Caesar and Mark Antony?"
+            };
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                ShowReadAnswers(topic, i);
+            }
+        }
         static void ShowSportsQuestions()
         {
             string[] questions;
             int topic = 1;
             questions = new string[]
             {
+
                 "How long does a soccer game last?",
                 "Which swimming style is faster?",
                 "What sport is played annually in Paris at the Roland Garros tournament?",
@@ -83,6 +101,46 @@ namespace Activity3
                 "What is the name of the painter who cut off his ear?",
                 "The painting called \"Guernica\" was made by...",
                 "Who painted the Sistine Chapel in the Vatican?"
+
+            };
+
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                ShowReadAnswers(topic, i);
+            }
+
+        }
+        static public void ShowScienceQuestions()
+        {
+            string[] questions;
+            int topic = 6;
+            questions = new string[]
+            {
+                "What is the chemical symbol for water?",
+                "What is the process by which plants make their own food called?",
+                "Which planet is known as the \"Red Planet\"?",
+                "What is the atomic number of carbon?",
+                "What is the Earth's outermost layer called?"
+            };
+
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                ShowReadAnswers(topic, i);
+            }
+        }
+        static public void ShowMathQuestions()
+        {
+            string[] questions;
+            int topic = 5;
+            questions = new string[]
+            {
+                "What is the value of π (pi) rounded to two decimal places?",
+                "What is the square root of 144?",
+                "What is the result of 7 × 8 ÷ 4?",
+                "What is the value of 5² - 3²?",
+                "What is the sum of the interior angles of a triangle?"
             };
 
             for (int i = 0; i < questions.Length; i++)
@@ -109,6 +167,7 @@ namespace Activity3
                 ShowReadAnswers(topic, i);
             }
         }
+
 
         static void ShowReadAnswers(int topicNumber, int questionNum)
         {
@@ -250,25 +309,163 @@ namespace Activity3
                 }
 
             }
-
-
-        }
-
-        static void CheckAnswersShowResult(String correctAnswer, String input)
+            else if (topicNumber == 4)
             {
-                if (input.Trim().ToLower() == correctAnswer.ToLower().Trim())
+                //HISTORY
+
+                switch (questionNum)
                 {
-                    Console.WriteLine("CORRECT");
+                    case 0:
+                        Console.WriteLine("A.1914");
+                        Console.WriteLine("B.1814");
+                        Console.WriteLine("C.1912");
+                        Console.WriteLine("D.1915");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.Thomas Jefferson");
+                        Console.WriteLine("B.Abraham Lincoln");
+                        Console.WriteLine("C.George Washington");
+                        Console.WriteLine("D.John Adams");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.Golden Hind");
+                        Console.WriteLine("B.Mayflower");
+                        Console.WriteLine("C.Santa María");
+                        Console.WriteLine("D.HMS Endeavour");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.1934");
+                        Console.WriteLine("B.1935");
+                        Console.WriteLine("C.1944");
+                        Console.WriteLine("D.1945");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.Nefertiti");
+                        Console.WriteLine("B.Hatshepsut");
+                        Console.WriteLine("C.Cleopatra");
+                        Console.WriteLine("D.Nefertari");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
                 }
-                else
-                {
-                    Console.WriteLine("INCORRECT");
-                }
-                Console.WriteLine();
 
             }
 
+            else if (topicNumber == 5)
+            {
+                //MATHS
+
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.3.16");
+                        Console.WriteLine("B.3.15");
+                        Console.WriteLine("C.3.14");
+                        Console.WriteLine("D.3.23");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.12");
+                        Console.WriteLine("B.10");
+                        Console.WriteLine("C.13");
+                        Console.WriteLine("D.14");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    //continuar aqui
+                    case 2:
+                        Console.WriteLine("A.14");
+                        Console.WriteLine("B.10");
+                        Console.WriteLine("C.16");
+                        Console.WriteLine("D.13");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.15");
+                        Console.WriteLine("B.25");
+                        Console.WriteLine("C.16");
+                        Console.WriteLine("D.20");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.80 degrees");
+                        Console.WriteLine("B.180 degrees");
+                        Console.WriteLine("C.90 degrees");
+                        Console.WriteLine("D.80 disagrees");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
+            }
+
+            else
+            {
+                //SCIENCE
+
+                switch (questionNum)
+                {
+                    case 0:
+                        Console.WriteLine("A.O2");
+                        Console.WriteLine("B.NaCI");
+                        Console.WriteLine("C.H2O");
+                        Console.WriteLine("D.CO2");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 1:
+                        Console.WriteLine("A.Photosynthesis");
+                        Console.WriteLine("B.Respiration");
+                        Console.WriteLine("C.Transpiration");
+                        Console.WriteLine("D.Germination");
+                        CheckAnswersShowResult("a", input = Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("A.Venus");
+                        Console.WriteLine("B.Mart");
+                        Console.WriteLine("C.Jupiter");
+                        Console.WriteLine("D.Saturn");
+                        CheckAnswersShowResult("b", input = Console.ReadLine());
+                        break;
+                    case 3:
+                        Console.WriteLine("A.5");
+                        Console.WriteLine("B.12");
+                        Console.WriteLine("C.6");
+                        Console.WriteLine("D.8");
+                        CheckAnswersShowResult("c", input = Console.ReadLine());
+                        break;
+                    case 4:
+                        Console.WriteLine("A.Mantle");
+                        Console.WriteLine("B.Core");
+                        Console.WriteLine("C.Lithosphere");
+                        Console.WriteLine("D.Crust");
+                        CheckAnswersShowResult("d", input = Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("ERROR");
+                        break;
+                }
+            }
+        }
+
+        static void CheckAnswersShowResult(String correctAnswer, String input)
+        {
+            if (input.Trim().ToLower() == correctAnswer.ToLower().Trim())
+            {
+                Console.WriteLine("CORRECT");
+            }
+            else
+            {
+                Console.WriteLine("INCORRECT");
+            }
+            Console.WriteLine();
 
         }
+
     }
 }
